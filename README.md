@@ -4,6 +4,12 @@ Ett spel för kursen Nätverksteknik, i 3D eller 2D. Du är ny nätverkstekniker
 
 Nätet, adressplanen, utrustningen och felen följer kursboken *Nätverksteknik – Från sladden och uppåt*: kapitel 1–10, bilaga D (felbiblioteket) och bilaga G (racket och Nordviks adressplan).
 
+![Krabba-passet i HD-2D: teknikern står vid racken i serverrummet medan solljuset faller in genom fönstret](docs/hd2d.jpg)
+
+| 2D | 3D | Terminalen |
+|---|---|---|
+| ![2D-läget: kontorslandskapet i 16-bitarsstil med Anna vid skrivbordet och Krabban på golvet](docs/2d.jpg) | ![3D-läget: rack A i serverrummet på nära håll med kablar och frontpaneler](docs/3d.jpg) | ![Terminalen: show interfaces trunk på SW-Nordvik-1](docs/terminal.jpg) |
+
 ## Ladda ner och spela
 
 Hämta den senaste zip-filen under [Releases](https://github.com/felixarvid2/Krabba-passet/releases), packa upp den och öppna `index.html` i Chrome, Edge eller Firefox. Vill du ha de färdiga 3D-modellerna startar du en webbserver i mappen (se nedan).
