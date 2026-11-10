@@ -3,10 +3,11 @@ const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
   const p = await b.newPage({ viewport: { width: 1280, height: 760 } });
+  p.setDefaultTimeout(120000); // en skärmbild kan ta över 30 s när SwiftShader ritar 3D i en långsam container
   const errs = [];
   p.on('pageerror', e => errs.push('pageerror: ' + e.message + ' ' + e.stack));
   p.on('console', m => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
-  await p.addInitScript(() => { try { const s = JSON.parse(localStorage.getItem('krabba-passet.settings') || '{}'); s.lastVersion = '10.4'; localStorage.setItem('krabba-passet.settings', JSON.stringify(s)); } catch (e) {} });
+  await p.addInitScript(() => { try { const s = JSON.parse(localStorage.getItem('krabba-passet.settings') || '{}'); s.lastVersion = '11.1'; localStorage.setItem('krabba-passet.settings', JSON.stringify(s)); } catch (e) {} });
   await p.goto('http://localhost:8765/index.html', { waitUntil: 'domcontentloaded' });
   await p.waitForTimeout(4000);
   await p.waitForTimeout(1500);
