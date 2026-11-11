@@ -35,7 +35,7 @@ node tools/offline.js   # en gång, skapar assets3d/offline.js
 
 Öppna sedan `index.html` direkt från mappen. Alternativt startar du en lokal webbserver med `npx http-server .` och går till `http://localhost:8080`.
 
-## Tre sätt att se spelet
+## Fyra sätt att se spelet
 
 Välj visning i startmenyn. Valet sparas och kan bytas mitt i en vecka.
 
